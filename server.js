@@ -4,8 +4,8 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const Team = require('./models/teams.js');
-// const cors = require('cors');
-// app.use(cors());
+const cors = require('cors');
+app.use(cors());
 
 mongoose.connect(process.env.MONGODB_URI);
 
